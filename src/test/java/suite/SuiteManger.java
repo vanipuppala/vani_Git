@@ -8,7 +8,7 @@ import util.DriverManager;
 public class SuiteManger {
 
     DriverManager driverManager;
-    private static ConfigFileReader config =new ConfigFileReader();
+    protected static ConfigFileReader config =new ConfigFileReader();
 
     @BeforeSuite(alwaysRun = true)
 
@@ -28,7 +28,10 @@ public class SuiteManger {
     {
         DriverManager.driver.manage().window().maximize();
         String baseUrl=config.getProperty("base_url");
+
+
         DriverManager.driver.get(baseUrl);
+
 
     }
 }
