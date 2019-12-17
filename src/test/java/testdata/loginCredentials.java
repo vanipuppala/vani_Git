@@ -9,7 +9,7 @@ public class loginCredentials {
     public static Object[][] loginData()
     {
         return new Object[][]{
-                {"vapasi@thoughtworks.com","test123"}
+                {"vani.puppala@gmail.com","Kritish5396"}
         };
     }
 }

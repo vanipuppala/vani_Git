@@ -4,9 +4,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import suite.SuiteManger;
 import util.DriverManager;
 
-public class LoginPage {
+public class LoginPage extends SuiteManger {
 
     public LoginPage()
     {
@@ -20,18 +21,31 @@ public class LoginPage {
 
     private WebElement pword;
 
+    @FindBy(xpath = "//input[@name='commit']")
+
+    private WebElement submit;
+
+
+
     public void enterValue(WebElement field,String value)
     {
         field.click();
         field.clear();
         field.sendKeys(value);
     }
-   public void login(String username,String password)
+   public HomePage login(String username,String password)
    {
        enterValue(email,username);
        enterValue(pword,password);
+       submit.click();
+       return new HomePage();
 
 
+   }
+
+   public String loginMessage()
+   {
+        return null;
    }
 
 }

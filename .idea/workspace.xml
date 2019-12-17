@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf8743a8-e8c1-4076-adae-3a89e1d0a7c3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/CartPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestNGPractice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TestNGPractice.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/DriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/DriverManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/config/testdata.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/config/testdata.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/suite/SuiteManger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/suite/SuiteManger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testdata/loginCredentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testdata/loginCredentials.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,6 +58,42 @@
     </option>
   </component>
   <component name="RunManager" selected="TestNG.LoginTest.login">
+    <configuration name="HomePage.getnoofproducts" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TestNGPractice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pages.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pages" />
+      <option name="MAIN_CLASS_NAME" value="pages.HomePage" />
+      <option name="METHOD_NAME" value="getnoofproducts" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HomePage.searchItem" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TestNGPractice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pages.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pages" />
+      <option name="MAIN_CLASS_NAME" value="pages.HomePage" />
+      <option name="METHOD_NAME" value="searchItem" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TestNGPractice" />
       <extension name="coverage">
@@ -118,6 +150,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.LoginTest.login" />
+        <item itemvalue="TestNG.HomePage.searchItem" />
+        <item itemvalue="TestNG.HomePage.getnoofproducts" />
         <item itemvalue="TestNG.LoginTest" />
         <item itemvalue="TestNG.LoginTest.searchItem" />
       </list>
@@ -136,7 +170,14 @@
       <workItem from="1575956282117" duration="1978000" />
       <workItem from="1575960252442" duration="11632000" />
       <workItem from="1576043473448" duration="5093000" />
-      <workItem from="1576049523371" duration="137000" />
+      <workItem from="1576049523371" duration="927000" />
+      <workItem from="1576409683736" duration="43000" />
+      <workItem from="1576410353585" duration="7000" />
+      <workItem from="1576431007824" duration="21000" />
+      <workItem from="1576431598945" duration="264000" />
+      <workItem from="1576431888018" duration="3590000" />
+      <workItem from="1576474271726" duration="7354000" />
+      <workItem from="1576509409619" duration="4582000" />
     </task>
     <servers />
   </component>

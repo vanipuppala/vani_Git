@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pages.BasePage;
@@ -20,6 +21,7 @@ public class LoginTest extends SuiteManger {
     public static WebDriver driver;
     public BasePage basePage;
     public LoginPage loginPage;
+    public HomePage homePage;
 
 
     /*@BeforeTest
@@ -31,13 +33,19 @@ public class LoginTest extends SuiteManger {
     }*/
 
     @Test(dataProvider = "loginCredentials",dataProviderClass = loginCredentials.class)
-    public void login(String username,String password)
-    {
+    public void login(String username,String password) throws InterruptedException {
         basePage=new BasePage();
         loginPage=basePage.clickLoginButton();
-        loginPage.login(username,password);
+        homePage = loginPage.login(username,password);
 
-        String logInlink="//a[text()='Login']";
+        Assert.assertEquals(homePage.getsuccessmsg(),"Logged in successfully");
+
+        homePage.searchItem();
+
+        homePage.getnoofproducts();
+        homePage.getproductnames();
+
+       /* String logInlink="//a[text()='Login']";
         String emailinput="//input[@id='spree_user_email']";
         String passwordinput ="//input[@id='spree_user_password']";
         String login="//input[@class='btn btn-lg btn-success btn-block']";
@@ -45,30 +53,11 @@ public class LoginTest extends SuiteManger {
         DriverManager.driver.findElement(By.xpath(logInlink)).click();
         DriverManager.driver.findElement(By.xpath(emailinput)).sendKeys(username);
         DriverManager.driver.findElement(By.xpath(passwordinput)).sendKeys(password);
-        DriverManager.driver.findElement(By.xpath(login)).click();
+        DriverManager.driver.findElement(By.xpath(login)).click();*/
 
     }
 
-    @Test()
-
-    public void searchItem()
-    {
 
 
-        String searchbox="//input[@id='keywords']";
-        String searchbutton="//input[@class='btn btn-success']";
-        String searchItem=config.getProperty("searchitem");
-
-        DriverManager.driver.findElement(By.xpath(searchbox)).sendKeys(searchItem);
-        DriverManager.driver.findElement(By.xpath(searchbutton)).click();
-
-        /*List<WebElement>products= driver.findElements(By.xpath("//a[@class='d-block text-center']"));
-
-        int noofproducts= products.size();
-        System.out.println(noofproducts);*/
-
-
-
-    }
 
 }
