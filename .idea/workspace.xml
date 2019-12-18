@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf8743a8-e8c1-4076-adae-3a89e1d0a7c3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/CartPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/CheckOutPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/config/testdata.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/config/testdata.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/CartPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testdata/loginCredentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testdata/loginCredentials.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -177,7 +174,10 @@
       <workItem from="1576431598945" duration="264000" />
       <workItem from="1576431888018" duration="3590000" />
       <workItem from="1576474271726" duration="7354000" />
-      <workItem from="1576509409619" duration="4582000" />
+      <workItem from="1576509409619" duration="4890000" />
+      <workItem from="1576606086295" duration="129000" />
+      <workItem from="1576667154924" duration="660000" />
+      <workItem from="1576687355269" duration="4569000" />
     </task>
     <servers />
   </component>

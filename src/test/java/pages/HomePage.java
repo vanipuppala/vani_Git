@@ -20,7 +20,7 @@ public class HomePage  extends SuiteManger {
     {
         PageFactory.initElements(DriverManager.driver,this);
     }
-
+    List<String >productNames = new ArrayList<String>();
     @FindBy(xpath="//div[contains(@id,'product_')]")
     private WebElement products;
 
@@ -38,7 +38,14 @@ public class HomePage  extends SuiteManger {
     @FindAll(@FindBy(xpath = ("//span[@class='info mt-3 d-block']")))
     private List<WebElement> productList;
 
+    List<WebElement> allProducts;
     private int noofproducts;
+
+    @FindBy(xpath = "//input[@id = 'quantity']")
+    private WebElement quantity;
+
+    @FindBy(xpath = "//button[@id = 'add-to-cart-button']")
+    private WebElement addtoCartButton;
 
 
     public String getsuccessmsg()
@@ -86,47 +93,42 @@ public class HomePage  extends SuiteManger {
 
     public List getnoofproducts() {
 
-        List<WebElement> allProducts = productList;
+        //Get list of product WebElements
+        //List<WebElement> allProducts = productList;
+
+        //Create another array list of strings
+
         //List<WebElement> Products =DriverManager.driver.findElements(By.tagName("a"));
         // List<WebElement> noOfProducts1 =DriverManager.driver.findElements(By.xpath("//a[@class='d-block text-center']"));
-        int noofproducts = allProducts.size();
+        int noofproducts = productList.size();
         System.out.println("Total no of products" + noofproducts);
+
+        //Getting text for all the elements
+        for(int i =0; i<noofproducts;i++)
+        {
+            productNames.add(productList.get(i).getText());
+            System.out.println(productNames.get(i));
+        }
         return allProducts;
 
     }
-        public List getproductnames()
-        {
-            List<String >productNames = new ArrayList<String>();
 
-            for(int i=1;i<=noofproducts;i++)
-            {
-                productList.get(i).getText();
-                //productNames.add(productList.get(i).getText());
-                System.out.println(productNames);
-            }
-            return productNames;
-
-
-
-    }
-
-    public void checkformatchproducts()
+    public void selectproducts()
     {
 
-
+productList.get(0).click();
 
     }
 
-
-
-    public void addtocart()
+    public void enterQuantity()
     {
-        DriverManager.driver.findElement(By.xpath("//span[text()='Ruby on Rails Tote']")).click();
+        quantity.click();
+        quantity.clear();
+        quantity.sendKeys("4");
     }
-
-
-
-
-
-
+public CartPage addtoCart()
+{
+    addtoCartButton.click();
+    return  new CartPage();
+}
 }

@@ -7,9 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import pages.BasePage;
-import pages.HomePage;
-import pages.LoginPage;
+import pages.*;
 import suite.SuiteManger;
 import testdata.loginCredentials;
 import util.DriverManager;
@@ -22,6 +20,11 @@ public class LoginTest extends SuiteManger {
     public BasePage basePage;
     public LoginPage loginPage;
     public HomePage homePage;
+    public CartPage cartPage;
+    public CheckOutPage CheckOutPage;
+    public String ProductNameTitle;
+    public String titleofcheckoutpage;
+
 
 
     /*@BeforeTest
@@ -37,13 +40,46 @@ public class LoginTest extends SuiteManger {
         basePage=new BasePage();
         loginPage=basePage.clickLoginButton();
         homePage = loginPage.login(username,password);
+        cartPage=homePage.addtoCart();
+        CheckOutPage=cartPage.checkOut();
 
         Assert.assertEquals(homePage.getsuccessmsg(),"Logged in successfully");
 
+        //give the  search key in the search textbox and click on search button
         homePage.searchItem();
 
+        //get the no of products  matched with
+        // the  search key
         homePage.getnoofproducts();
-        homePage.getproductnames();
+
+        //select the first product
+        homePage.selectproducts();
+
+        //select quantity or give quantity in product description page
+
+        homePage.enterQuantity();
+
+        //click addToCart button
+        cartPage=homePage.addtoCart();
+
+        //validate those added products are present in the cart or not
+
+        Assert.assertEquals(cartPage.getProductnameTitle(),ProductNameTitle);
+
+        //CheckOut
+       CheckOutPage = cartPage.checkOut();
+
+       //validate the CheckoutPage Title
+        Assert.assertEquals(CheckOutPage.getTitleofCheckOutPage(),titleofcheckoutpage);
+
+        //click on save andcontinue button
+        CheckOutPage.clickonSaveandContinue();
+
+
+
+
+
+
 
        /* String logInlink="//a[text()='Login']";
         String emailinput="//input[@id='spree_user_email']";

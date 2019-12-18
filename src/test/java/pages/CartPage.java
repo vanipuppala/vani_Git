@@ -14,4 +14,24 @@ public class CartPage extends SuiteManger {
     {
         PageFactory.initElements(DriverManager.driver,this);
     }
+
+    @FindBy(xpath = "//a[text()='Ruby on Rails Bag']")
+    public WebElement ProductNameTitle;
+
+    @FindBy(xpath = "//button[@id='checkout-link']")
+   private WebElement checkout;
+
+
+    public String getProductnameTitle()
+    {
+        ProductNameTitle.getText();
+        return new String();
+    }
+    public CheckOutPage checkOut()
+    {
+        checkout.click();
+        return new CheckOutPage();
+    }
+
+
 }
